@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vaibhav/projects/task-manager/src/domain/Task.cpp" "CMakeFiles/task.dir/src/domain/Task.cpp.o" "gcc" "CMakeFiles/task.dir/src/domain/Task.cpp.o.d"
   "/home/vaibhav/projects/task-manager/src/domain/TaskStatus.cpp" "CMakeFiles/task.dir/src/domain/TaskStatus.cpp.o" "gcc" "CMakeFiles/task.dir/src/domain/TaskStatus.cpp.o.d"
   "/home/vaibhav/projects/task-manager/src/main.cpp" "CMakeFiles/task.dir/src/main.cpp.o" "gcc" "CMakeFiles/task.dir/src/main.cpp.o.d"
+  "/home/vaibhav/projects/task-manager/src/repository/InMemoryTaskRepository.cpp" "CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o" "gcc" "CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/task.dir/src/domain/TaskStatus.cpp.o.d"
   "CMakeFiles/task.dir/src/main.cpp.o"
   "CMakeFiles/task.dir/src/main.cpp.o.d"
+  "CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o"
+  "CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o.d"
   "task"
   "task.pdb"
 )

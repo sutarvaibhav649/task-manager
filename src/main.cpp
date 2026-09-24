@@ -1,26 +1,89 @@
+#include "domain/Task.hpp"
+#include "repository/InMemoryTaskRepository.hpp"
+
 #include <iostream>
 
-#include "domain/Task.hpp"
+int main()
+{
+    std::cout << "Task Manager App initialized\n";
 
-int main(){
-    std::cout << " Task Manager App initialized ✅\n";
+    InMemoryTaskRepository repository;
 
-    Task task(1,"Learn C++", TaskStatus::TODO);
+    // CREATE
+    repository.create("Learn C++");
+    repository.create("Learn Java");
+    repository.create("Learn CMake");
 
-    std::cout << "Task ID: " << task.getId() << "\n";
-    std::cout << "Task Name: " << task.getTitle() << "\n";
-    std::cout << "Task Status: " << task.getStatus() << "\n";
+    // FIND ALL
+    std::cout << "\nAll Tasks:\n";
 
-    task.start();
-    std::cout << "Task Status: " << task.getStatus() << "\n";
+    for (const Task& task : repository.findAll())
+    {
+        std::cout
+            << task.getId()
+            << " -- "
+            << task.getTitle()
+            << " -- "
+            << task.getStatus()
+            << '\n';
+    }
 
-    task.complete();
-    std::cout << "Task Status: " << task.getStatus() << "\n";
+    // FIND BY ID
+    auto task = repository.findById(1);
 
-    try{
-        task.complete();
-    }catch(const std::exception& e){
-        std::cout << e.what() << "\n";
+    if (task)
+    {
+        std::cout << "\nFound Task:\n";
+        std::cout
+            << task->getId()
+            << " -- "
+            << task->getTitle()
+            << " -- "
+            << task->getStatus()
+            << '\n';
+
+        // MODIFY LOCAL COPY
+        task->start();
+        task->complete();
+
+        // UPDATE REPOSITORY
+        if (repository.update(*task))
+        {
+            std::cout << "Task updated successfully\n";
+        }
+    }
+    else
+    {
+        std::cout << "Task not found\n";
+    }
+
+    // VERIFY UPDATE
+    auto updatedTask = repository.findById(1);
+
+    if (updatedTask)
+    {
+        std::cout << "\nAfter Update:\n";
+        std::cout
+            << updatedTask->getId()
+            << " -- "
+            << updatedTask->getTitle()
+            << " -- "
+            << updatedTask->getStatus()
+            << '\n';
+    }
+
+    // REMOVE
+    if (repository.remove(1))
+    {
+        std::cout << "\nTask removed successfully\n";
+    }
+
+    // VERIFY REMOVE
+    auto deletedTask = repository.findById(1);
+
+    if (!deletedTask)
+    {
+        std::cout << "Confirmed: Task no longer exists\n";
     }
 
     return 0;

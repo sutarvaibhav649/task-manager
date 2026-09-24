@@ -201,6 +201,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/repository/InMemoryTaskRepository.o: src/repository/InMemoryTaskRepository.cpp.o
+.PHONY : src/repository/InMemoryTaskRepository.o
+
+# target to build an object file
+src/repository/InMemoryTaskRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o
+.PHONY : src/repository/InMemoryTaskRepository.cpp.o
+
+src/repository/InMemoryTaskRepository.i: src/repository/InMemoryTaskRepository.cpp.i
+.PHONY : src/repository/InMemoryTaskRepository.i
+
+# target to preprocess a source file
+src/repository/InMemoryTaskRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.i
+.PHONY : src/repository/InMemoryTaskRepository.cpp.i
+
+src/repository/InMemoryTaskRepository.s: src/repository/InMemoryTaskRepository.cpp.s
+.PHONY : src/repository/InMemoryTaskRepository.s
+
+# target to generate assembly for a file
+src/repository/InMemoryTaskRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.s
+.PHONY : src/repository/InMemoryTaskRepository.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/repository/InMemoryTaskRepository.o"
+	@echo "... src/repository/InMemoryTaskRepository.i"
+	@echo "... src/repository/InMemoryTaskRepository.s"
 .PHONY : help
 
 

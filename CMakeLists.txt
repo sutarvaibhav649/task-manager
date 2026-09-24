@@ -16,6 +16,7 @@ add_executable(
     src/main.cpp
     src/domain/Task.cpp
     src/domain/TaskStatus.cpp
+    src/repository/InMemoryTaskRepository.cpp
 )
 
 # Include files
