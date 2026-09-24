@@ -1,0 +1,7 @@
+./vscode
+./idea
+./build
+
+.env
+*.o
+*.o.d
