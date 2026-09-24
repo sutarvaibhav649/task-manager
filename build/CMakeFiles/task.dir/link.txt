@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/task.dir/src/main.cpp.o CMakeFiles/task.dir/src/domain/Task.cpp.o CMakeFiles/task.dir/src/domain/TaskStatus.cpp.o CMakeFiles/task.dir/src/repository/InMemoryTaskRepository.cpp.o -o task 

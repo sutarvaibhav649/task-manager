@@ -1,3 +1,0 @@
-/home/vaibhav/projects/task-manager/build/CMakeFiles/task.dir
-/home/vaibhav/projects/task-manager/build/CMakeFiles/edit_cache.dir
-/home/vaibhav/projects/task-manager/build/CMakeFiles/rebuild_cache.dir
